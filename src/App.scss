@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway";
+}
+
+// NAVBAR
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  background: rgb(189, 178, 28);
+
+  .navbar-logo {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .navbar-nav {
+    display: flex;
+    list-style: none;
+
+    .option {
+      text-decoration: none;
+      padding: 1rem;
+      color: #fff;
+    }
+  }
+}
