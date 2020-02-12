@@ -45,7 +45,7 @@ export default [
   },
   {
     id: "5",
-    name: "The Power of Now: A Guide to Spiritual Enlightenment",
+    name: "The Power of Now",
     author: "Eckhart Tolle",
     price: "$8.99",
     info: "Paperback Book, 224 pages",
@@ -56,7 +56,7 @@ export default [
   },
   {
     id: "6",
-    name: "Feeling Good: The New Mood Therapy",
+    name: "Feeling Good",
     author: "David D. Burns, Aaron T. Beck",
     price: "$13.99",
     info: "Paperback Book, 736 pages",

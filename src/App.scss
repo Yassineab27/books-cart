@@ -45,3 +45,131 @@ body {
   width: 75%;
   margin: 0 auto;
 }
+
+// BOOKS COMPONENT
+.books-title {
+  text-align: center;
+  color: grey;
+}
+
+.books {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+// BOOK
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .book-name {
+    font-size: 27px;
+    text-decoration: none;
+    color: #000;
+  }
+  .book-author {
+    font-size: 15px;
+    margin: 0.5rem 0;
+    color: rgb(173, 173, 173);
+  }
+  .book-price {
+    color: teal;
+    margin-top: 0.5rem;
+  }
+
+  .book-img {
+    height: 400px;
+    width: 250px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.842);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.842);
+      opacity: 0.9;
+    }
+  }
+}
+
+// BOOK DETAIL
+.book-detail {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .book-detail-name {
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+  }
+
+  .book-detail-img {
+    height: 500px;
+    width: 350px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.842);
+  }
+
+  .book-detail-author {
+    font-size: 20px;
+    margin: 0.5rem 0;
+    color: rgb(173, 173, 173);
+  }
+  .book-detail-info {
+    font-size: 20px;
+    margin: 0.3rem 0;
+    color: #000;
+  }
+
+  .book-detail-price {
+    color: teal;
+    font-size: 30px;
+    margin: 0.5rem 0;
+  }
+
+  .description {
+    margin-top: 2rem;
+    align-self: flex-start;
+  }
+
+  .book-detail-description {
+    color: #000;
+    font-size: 25px;
+    margin-top: 0.5rem;
+  }
+  .book-detail-btns {
+    margin-top: 2rem;
+
+    .btn {
+      padding: 1rem 1.8rem;
+      margin: 0 0.2rem;
+      border: none;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.712);
+      cursor: pointer;
+    }
+
+    .btn-cart {
+      background: #ccc;
+      transition: 0.5s all ease;
+
+      &:hover {
+        background: rgb(189, 178, 28);
+      }
+    }
+
+    .btn-fav {
+      background: rgb(189, 178, 28);
+      transition: 0.5s all ease;
+
+      &:hover {
+        background: #ccc;
+      }
+    }
+  }
+}
