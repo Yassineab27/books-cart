@@ -6,7 +6,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 const BookDetail = props => {
   const { books, handleAddBook } = useContext(BooksContext);
   const book = books.find(bk => bk.id === props.match.params.book_id);
-  const { name, author, price, id, description, img_url, info } = book;
+  const { name, author, price, description, img_url, info } = book;
 
   return (
     <div className="book-detail">

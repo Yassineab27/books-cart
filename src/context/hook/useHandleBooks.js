@@ -16,10 +16,10 @@ const useHandleBooks = () => {
     alert(`Book added to ${str} :)`);
   };
 
-  const handleDeleteBook = (bookPassed, str) => {
+  const handleDeleteBook = (id, str) => {
     str === "favorites"
-      ? setFavorites(favorites.filter(b => b.id !== bookPassed.id))
-      : setCart(cart.filter(b => b.id !== bookPassed.id));
+      ? setFavorites(favorites.filter(b => b.id !== id))
+      : setCart(cart.filter(b => b.id !== id));
   };
 
   return [favorites, cart, handleAddBook, handleDeleteBook];

@@ -3,7 +3,7 @@ import { BooksContext } from "../../context/BooksContextProvider";
 import Book from "./Book";
 
 const Books = props => {
-  const { books, favorites, cart } = useContext(BooksContext);
+  const { books } = useContext(BooksContext);
 
   return (
     <>
