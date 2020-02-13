@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { BooksContext } from "../../context/BooksContextProvider";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const BookDetail = props => {
   const { books } = useContext(BooksContext);
@@ -12,8 +14,13 @@ const BookDetail = props => {
       <p className="book-detail-author">by {author}</p>
       <p className="book-detail-info">{info}</p>
       <div className="book-detail-btns">
-        <button className="btn btn-cart">Add to cart</button>
-        <button className="btn btn-fav">Add to Favorite</button>
+        <button className="btn btn-cart">
+          Add to <AddShoppingCartIcon style={{ fontSize: "17px" }} />
+        </button>
+        <button className="btn btn-fav">
+          Add to Favorite{" "}
+          <FavoriteIcon style={{ fontSize: "17px", color: "red" }} />
+        </button>
       </div>
       <h2 className="book-detail-price">Price: {price}</h2>
       <h2 className="description">Description: </h2>
