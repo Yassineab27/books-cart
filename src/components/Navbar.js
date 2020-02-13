@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 const Navbar = () => {
   return (
@@ -12,10 +14,14 @@ const Navbar = () => {
           <li>All Books</li>
         </Link>
         <Link to="/favorites" className="option">
-          <li>Favorites</li>
+          <li>
+            <FavoriteIcon />
+          </li>
         </Link>
         <Link to="/cart" className="option">
-          <li>Cart</li>
+          <li>
+            <ShoppingCartIcon />
+          </li>
         </Link>
       </ul>
     </nav>

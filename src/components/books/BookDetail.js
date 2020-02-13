@@ -4,9 +4,10 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const BookDetail = props => {
-  const { books } = useContext(BooksContext);
+  const { books, handleAddBook } = useContext(BooksContext);
   const book = books.find(bk => bk.id === props.match.params.book_id);
   const { name, author, price, id, description, img_url, info } = book;
+
   return (
     <div className="book-detail">
       <h2 className="book-detail-name">{name}</h2>
@@ -14,10 +15,16 @@ const BookDetail = props => {
       <p className="book-detail-author">by {author}</p>
       <p className="book-detail-info">{info}</p>
       <div className="book-detail-btns">
-        <button className="btn btn-cart">
+        <button
+          onClick={() => handleAddBook(book, "cart")}
+          className="btn btn-cart"
+        >
           Add to <AddShoppingCartIcon style={{ fontSize: "17px" }} />
         </button>
-        <button className="btn btn-fav">
+        <button
+          onClick={() => handleAddBook(book, "favorites")}
+          className="btn btn-fav"
+        >
           Add to Favorite{" "}
           <FavoriteIcon style={{ fontSize: "17px", color: "red" }} />
         </button>
@@ -29,4 +36,4 @@ const BookDetail = props => {
   );
 };
 
-export default BookDetail;
+export default React.memo(BookDetail);
