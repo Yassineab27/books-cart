@@ -359,3 +359,67 @@ body {
     cursor: pointer;
   }
 }
+
+// RESPONSIVNESS
+// TABLET
+@media (max-width: "1125px") {
+  // BOOKS
+  .books {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cart {
+    .cart-labels {
+      display: none;
+    }
+
+    .cart-book {
+      h3 {
+        padding: 1rem;
+        font-size: 18px;
+      }
+
+      p {
+        color: grey;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// MOBILE
+@media (max-width: "800px") {
+  // NAV
+  .navbar {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    .navbar-nav {
+      margin-left: auto;
+      .option-txt {
+        display: none;
+      }
+    }
+  }
+  // BOOKS
+  .books {
+    grid-template-columns: 1fr;
+  }
+  // CART
+  .cart {
+    .cart-book {
+      grid-template-columns: 1fr;
+
+      h3 {
+        padding: 1rem;
+        font-size: 25px;
+      }
+
+      p {
+        color: grey;
+        font-size: 18px;
+      }
+    }
+  }
+}
