@@ -37,9 +37,23 @@ body {
       text-decoration: none;
       padding: 1rem;
       color: #fff;
+      position: relative;
+      cursor: pointer;
 
+      .item-counter {
+        position: absolute;
+        top: 12%;
+        right: 12%;
+        background: red;
+        color: black;
+        padding: 0.1rem 0.2rem;
+        border-radius: 30%;
+      }
+    }
+
+    .option-txt {
       &:hover {
-        text-shadow: 2px 2px 4px #000;
+        text-shadow: 1px 1px 3px black;
       }
     }
   }
