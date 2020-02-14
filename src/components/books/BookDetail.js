@@ -29,7 +29,7 @@ const BookDetail = props => {
           <FavoriteIcon style={{ fontSize: "17px", color: "red" }} />
         </button>
       </div>
-      <h2 className="book-detail-price">Price: {price}</h2>
+      <h2 className="book-detail-price">Price: ${price}</h2>
       <h2 className="description">Description: </h2>
       <p className="book-detail-description">{description}</p>
     </div>

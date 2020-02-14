@@ -19,4 +19,4 @@ const Books = props => {
   );
 };
 
-export default Books;
+export default React.memo(Books);

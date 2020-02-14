@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background: rgb(189, 178, 28);
   margin-bottom: 2.5rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -213,6 +213,7 @@ body {
 
     .favBook-img {
       height: 120px;
+      box-shadow: 1px 1px 5px #000005;
     }
 
     .favBookInfo {
@@ -237,6 +238,85 @@ body {
         font-size: 12px;
         color: #000;
       }
+    }
+  }
+}
+
+// CART COMPONENT
+.cart {
+  display: flex;
+  margin: 10rem 0 3rem 0;
+  flex-direction: column;
+
+  .cart-title {
+    margin-bottom: 1.8rem;
+    font-size: 30px;
+    align-self: center;
+  }
+
+  .cart-labels {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+
+    h3 {
+      color: rgb(189, 178, 28);
+    }
+  }
+
+  .cart-book {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 1rem;
+
+    img {
+      height: 250px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    }
+
+    h3 {
+      padding: 1rem;
+    }
+
+    p {
+      color: grey;
+    }
+  }
+
+  .total-price {
+    align-self: flex-end;
+    color: teal;
+
+    span {
+      color: black;
+    }
+  }
+
+  .pay-btn {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: rgb(189, 178, 28);
+    color: #fff;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.527);
+    cursor: pointer;
+    transition: all 0.7s ease;
+
+    &:hover {
+      background: #000;
+      color: rgb(189, 178, 28);
+      box-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.527);
     }
   }
 }

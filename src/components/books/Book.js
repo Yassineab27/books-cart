@@ -12,9 +12,9 @@ const Book = props => {
       <Link to={`/books/${id}`}>
         <img className="book-img" src={img_url} alt={name} />
       </Link>
-      <h3 className="book-price">{price}</h3>
+      <h3 className="book-price">${price}</h3>
     </div>
   );
 };
 
-export default Book;
+export default React.memo(Book);
