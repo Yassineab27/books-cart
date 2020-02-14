@@ -22,7 +22,11 @@ const useHandleBooks = () => {
       : setCart(cart.filter(b => b.id !== id));
   };
 
-  return [favorites, cart, handleAddBook, handleDeleteBook];
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  return [favorites, cart, handleAddBook, handleDeleteBook, clearCart];
 };
 
 export default useHandleBooks;

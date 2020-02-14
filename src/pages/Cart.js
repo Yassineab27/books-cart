@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { BooksContext } from "../context/BooksContextProvider";
 import CartBook from "../pages/CartBook";
 import PriceCounter from "./PriceCounter";
@@ -19,7 +20,19 @@ const Cart = () => {
         <CartBook key={book.id} book={book} onDelete={handleDeleteBook} />
       ))}
       <PriceCounter cart={cart} />
-      {cart.length ? <button className="pay-btn">Pay Now</button> : null}
+      {cart.length ? (
+        <button className="pay-btn">
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "#fff"
+            }}
+            to="/books/payment"
+          >
+            Pay Now
+          </Link>
+        </button>
+      ) : null}
     </div>
   );
 };

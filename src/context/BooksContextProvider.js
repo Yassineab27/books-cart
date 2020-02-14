@@ -7,7 +7,13 @@ const BooksContext = React.createContext();
 
 const BooksContextProvider = props => {
   const [books, setBooks] = useState(booksState);
-  const [favorites, cart, handleAddBook, handleDeleteBook] = useHandleBooks();
+  const [
+    favorites,
+    cart,
+    handleAddBook,
+    handleDeleteBook,
+    clearCart
+  ] = useHandleBooks();
   const [showFavorites, setShowFavorites] = useToggler();
 
   return (
@@ -19,7 +25,8 @@ const BooksContextProvider = props => {
         handleAddBook,
         handleDeleteBook,
         showFavorites,
-        setShowFavorites
+        setShowFavorites,
+        clearCart
       }}
     >
       {props.children}

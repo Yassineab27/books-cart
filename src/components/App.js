@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Books from "./books/Books";
 import BookDetail from "./books/BookDetail";
 import Cart from "../pages/Cart";
+import PostPayment from "../pages/PostPayment";
 import "../App.scss";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <div className="container">
         <Switch>
           <Route exact path="/" component={Books} />
+          <Route exact path="/books/payment" component={PostPayment} />
           <Route path="/books/:book_id" component={BookDetail} />
           <Route path="/cart" component={Cart} />
         </Switch>
